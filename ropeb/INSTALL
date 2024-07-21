@@ -1,0 +1,23 @@
+
+  PEB INSTALLATION
+
+  1 Download and compile peb 
+
+     $ wget http://mypweb.googlecode.com/files/peb-***.tar.gz
+	 $ tar xzvf peb-***.tar.gz
+	 $ cd peb-*** 
+     $ phpize
+     $ ./configure --enable-peb
+     $ make
+     $ make install
+
+  2 Enable peb module in your php.ini:
+
+  	 extension=peb.so
+  	 
+ 3 run test script in peb-****/tests
+ 
+ 
+ sudo MACOSX_DEPLOYMENT_TARGET=10.7 CFLAGS="-arch i386 -arch x86_64 -g -Os -pipe -no-cpp-precomp" CCFLAGS="-arch i386 -arch x86_64 -g -Os -pipe" CXXFLAGS="-arch i386 -arch x86_64 -g -Os -pipe" LDFLAGS="-arch i386 -arch x86_64 -bind_at_load" 
+
+ ./configure CC="gcc -m32 -L/usr/local/lib/erlang/lib/erl_interface-3.7.6/lib -I/usr/local/lib/erlang/lib/erl_interface-3.7.6/include" --enable-ropeb
