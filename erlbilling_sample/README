@@ -1,0 +1,22 @@
+Small "billing" sample written in Erlang (mnesia, gen_server, mochiweb, erlsom).
+
+Dependencies:
+  git (to pull erlang-related dependencies)
+  siege (to test soap handlers performance)
+
+Compiling:
+  $ ./rebar get-deps
+  $ ./rebar compile
+
+Running:
+  $ ./start-dev.sh
+
+Testing SOAP handlers performance:
+  $ cd priv
+  $ siege -R siegerc
+
+Web ui runs on http://localhost:8080
+JSON requests --> http://localhost:8080/json
+SOAP requests --> http://localhost:8080/soap
+
+Number of test records is defined in src/billing_db.erl (NUM_ACCOUNTS).
