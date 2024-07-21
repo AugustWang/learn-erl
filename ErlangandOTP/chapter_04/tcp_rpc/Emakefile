@@ -1,0 +1,3 @@
+{"src/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"gen_tcp/*",[{i,"include"}, {outdir, "ebin"}]}.
+

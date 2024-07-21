@@ -1,0 +1,2 @@
+{"src/*",[{i,"include"}, {outdir, "ebin"}]}.
+{"simple_cache/*",[{i,"include"}, {outdir, "ebin"}]}.
