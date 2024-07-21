@@ -1,0 +1,56 @@
+ROPEB INSTALLATION
+
+----------------------------------
+
+Install On CentOS:
+
+Step 1:
+---------
+tar xzvf ropeb.tar.gz
+cd ./ropeb
+phpize
+=========
+
+Step 2:
+先确认版本号和php-config路径
+---------
+./configure CC="gcc -L/usr/local/lib/erlang/lib/erl_interface-3.7.11/lib -I/usr/local/lib/erlang/lib/erl_interface-3.7.11/include" --enable-ropeb --with-php-config=/usr/local/php/bin/php-config
+
+./configure CC="gcc -L/usr/local/lib/erlang/lib/erl_interface-3.7.11/lib -I/usr/local/lib/erlang/lib/erl_interface-3.7.11/include" --enable-ropeb --with-php-config=/usr/bin/php-config5
+
+./configure CC="gcc -L/usr/local/lib/erlang/lib/erl_interface-3.7.15/lib -I/usr/local/lib/erlang/lib/erl_interface-3.7.15/include" --enable-ropeb --with-php-config=/usr/local/php/bin/php-config
+=========
+
+Step 3:
+---------
+make
+=========
+
+Step 4:
+---------
+make test
+=========
+
+Step 5:
+---------
+make install
+=========
+
+Step 6:
+---------
+extension=ropeb.so
+or:
+extension=/path/to/ropeb.so
+=========
+
+Step 7:
+---------
+restart php-cgi
+=========
+
+----------------------------------
+ 
+Install On Mac:
+
+# sudo MACOSX_DEPLOYMENT_TARGET=10.7 CFLAGS="-arch i386 -arch x86_64 -g -Os -pipe -no-cpp-precomp" CCFLAGS="-arch i386 -arch x86_64 -g -Os -pipe" CXXFLAGS="-arch i386 -arch x86_64 -g -Os -pipe" LDFLAGS="-arch i386 -arch x86_64 -bind_at_load" ./configure CC="gcc -m32 -L/usr/local/lib/erlang/lib/erl_interface-3.7.6/lib -I/usr/local/lib/erlang/lib/erl_interface-3.7.6/include" --enable-ropeb
+
